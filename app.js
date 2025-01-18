@@ -1,7 +1,7 @@
 // Import
-import { getData } from "./modules/index.js";
+import { getData, createCard, storeData } from "./modules/index.js";
 
 // Start
-const data = getData().then((res) => {
-    console.log(res[0].title);
+getData().then((res) => {
+    createCard(res, storeData);
 });
